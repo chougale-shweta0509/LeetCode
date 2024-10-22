@@ -4,9 +4,10 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             sum = sum + nums[i];
         }
-        int actualsum = nums.length*(nums.length + 1)/2;
-        int missingnum = actualsum - sum;
         
-        return missingnum;
+        int actualNum = nums.length * (nums.length + 1)/2;
+        int missingNum = actualNum - sum;
+        
+         return missingNum;
     }
 }
