@@ -1,16 +1,17 @@
 class Solution {
     public int maxArea(int[] height) {
         int i = 0, j = height.length - 1;
-        //to max area of water contained
+        //to display max area of water contained in answer.
         int ans = 0;
+        
         while(i < j){
-            //to calculate area
+            //find min
             int t = Math.min(height[i], height[j]) * (j - i);
             ans = Math.max(ans, t);
             if(height[i] < height[j]){
-                ++i;
+                i++;
             }else{
-                --j;
+                j--;
             }
         }
         return ans;
