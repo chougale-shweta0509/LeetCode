@@ -11,19 +11,20 @@
 class Solution {
     public ListNode swapPairs(ListNode head) {
         ListNode temp = new ListNode(0);
-        temp.next = head;
+        
+            temp.next = head;
         ListNode prev = temp;
         
         while(prev.next != null && prev.next.next != null){
             ListNode first = prev.next;
             ListNode second = first.next;
             
-            //swapping
+            //swapp
             prev.next = second;
-            first.next = second.next;
+            first.next =  second.next;
             second.next = first;
             
-            //moves prev 2 nodes ahead
+            //move prev 2 nodes ahead
             prev = first;
         }
         return temp.next;
